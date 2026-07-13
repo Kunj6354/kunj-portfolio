@@ -5,6 +5,10 @@ const projects = [
     title: "TWCC — Legacy Recovery & Modernization Program",
     category: ["gis", "platform"],
     badge: "Flagship Professional Work",
+    status: "Restored & Expanding",
+    visibility: "Private Source · Public Case Study",
+    evidence:
+      "Recovered and validated multiple C++/Qt, GIS, simulator, database, planning, replay, and network-integrated workflows.",
     summary:
       "Recovery and modernization of a multi-module C++/Qt GIS system, including operator displays, track planning, simulation, replay, interfaces, database integration, and a modern web POC.",
     points: [
@@ -27,6 +31,10 @@ const projects = [
     title: "Radar Detection & Terrain-Aware Radar Simulation",
     category: ["gis", "platform"],
     badge: "Active Development",
+    status: "Active Development",
+    visibility: "Private Source · Public Case Study",
+    evidence:
+      "The latest verified radar backend milestone completed 45 automated tests covering physics, detection, measurements, configuration, and runtime behaviour.",
     summary:
       "A Python and Angular platform for CAT048/CAT062 radar visualization, replay, live UDP processing, diagnostics, and terrain-aware performance simulation.",
     points: [
@@ -49,6 +57,10 @@ const projects = [
     title: "TGBMC — Tactical GIS Battle Management Platform",
     category: ["gis", "platform"],
     badge: "Flagship POC",
+    status: "Platform Foundation",
+    visibility: "Private Source · Public Case Study",
+    evidence:
+      "Established a PostGIS foundation with 12 core application tables, SRID 4326 geospatial data, and a modern Angular, FastAPI, Redis, and Docker-based architecture.",
     summary:
       "A tactical GIS software demonstration for situational awareness, counter-drone monitoring, mission planning, replay, and geospatial intelligence.",
     points: [
@@ -71,6 +83,10 @@ const projects = [
     title: "Robotics, SLAM & 3D Perception",
     category: ["robotics"],
     badge: "Professional Engineering",
+    status: "Completed Engineering Work",
+    visibility: "Private Source · Portfolio Summary",
+    evidence:
+      "Integrated RGB-D cameras, LiDAR, ROS2, RViz2, SLAM, OpenCV, Open3D, simulation assets, localization, mapping, and rover navigation workflows.",
     summary:
       "Integration of RGB-D cameras, LiDAR, ROS2, SLAM, 3D perception, simulation, and rover navigation workflows for mapping and spatial analysis.",
     points: [
@@ -93,6 +109,10 @@ const projects = [
     title: "CarSetu — Marketplace & Android Field Operations",
     category: ["business", "platform", "mobile"],
     badge: "Independent Product Project",
+    status: "Active Product Project",
+    visibility: "Private Source · Product Demo",
+    evidence:
+      "Implemented a structured 52-photo vehicle-capture workflow with 48 required and 4 optional photo positions, alongside admin review and public inventory workflows.",
     summary:
       "A local used-car marketplace ecosystem combining public inventory, dealer workflows, admin operations, lead generation, photo review, and an Android field-capture application.",
     points: [
@@ -115,6 +135,10 @@ const projects = [
     title: "BarodaBox — Rental Operations Platform",
     category: ["business", "platform"],
     badge: "Live Business System",
+    status: "Operational Product",
+    visibility: "Private Source · Product Demo",
+    evidence:
+      "Digitized booking and availability operations for a six-unit cooler-rental inventory with customer-facing product information.",
     summary:
       "A WhatsApp-first cooler-rental platform for inventory availability, booking information, deposits, product presentation, and local operations.",
     points: [
@@ -137,6 +161,10 @@ const projects = [
     title: "StackOre Technologies — Software POC Studio",
     category: ["business", "platform"],
     badge: "Independent Platform Project",
+    status: "Active Platform Project",
+    visibility: "Private Source · Public Website",
+    evidence:
+      "Built a deployed credibility platform supporting 3+ live projects, service presentation, contact workflows, and a growing software proof-of-concept portfolio.",
     summary:
       "A software product and proof-of-concept studio focused on websites, MVPs, dashboards, automation, AI/ML, GIS, computer vision, robotics, and edge systems.",
     points: [
@@ -176,6 +204,15 @@ function projectCard(project, index) {
       </div>
       <h3>${project.title}</h3>
       <p class="project-summary">${project.summary}</p>
+
+      <div class="project-meta">
+        <span class="project-status">
+          <span class="project-status-dot"></span>
+          ${project.status}
+        </span>
+        <span class="project-visibility">${project.visibility}</span>
+      </div>
+
       <ul class="project-points">${points}</ul>
       <div class="project-tags">${tags}</div>
       <div class="project-actions">
@@ -210,6 +247,22 @@ function openProject(project) {
     <p class="modal-kicker">${project.badge}</p>
     <h2>${project.title}</h2>
     <p>${project.summary}</p>
+
+    <div class="modal-project-meta">
+      <span>
+        <small>Status</small>
+        <strong>${project.status}</strong>
+      </span>
+      <span>
+        <small>Availability</small>
+        <strong>${project.visibility}</strong>
+      </span>
+    </div>
+
+    <section class="modal-section">
+      <h3>Verified evidence</h3>
+      <p>${project.evidence}</p>
+    </section>
 
     <section class="modal-section">
       <h3>My contribution</h3>

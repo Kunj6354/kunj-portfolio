@@ -38,9 +38,3 @@ Institute of Infrastructure, Technology, Research and Management, Ahmedabad
 
 ```bash
 python3 -m http.server 4173
-Open http://127.0.0.1:4173.
-
-Contact
-Email: kunj6354@gmail.com
-LinkedIn: Kunj Patel
-GitHub: Kunj6354

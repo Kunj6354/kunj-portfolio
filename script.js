@@ -56,6 +56,7 @@ const projects = [
   },
   {
     id: "tgbmc",
+    caseStudyUrl: "./projects/tgbmc.html",
     title: "TGBMC — Tactical GIS Battle Management Platform",
     category: ["gis", "platform"],
     badge: "Flagship POC",

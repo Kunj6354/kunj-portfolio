@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <meta
+    name="description"
+    content="Public engineering case study of the TGBMC tactical GIS and geospatial decision-support platform."
+  />
+
+  <title>TGBMC Tactical GIS Platform | Kunj Patel</title>
+
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@600;700;800&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="../styles.css" />
+  <link rel="stylesheet" href="./project.css" />
+</head>
+
+<body>
+  <header class="case-header">
+    <div class="shell">
+      <nav class="case-nav">
+        <a class="brand" href="../index.html">
+          <span class="brand-mark">KP</span>
+          <span>Kunj Patel</span>
+        </a>
+
+        <a class="case-back" href="../index.html#projects">
+          ← All projects
+        </a>
+      </nav>
+
+      <div class="case-hero">
+        <div class="case-labels">
+          <span>Flagship GIS POC</span>
+          <span>Platform foundation</span>
+          <span>Private source</span>
+        </div>
+
+        <h1>TGBMC Tactical GIS Platform</h1>
+
+        <p class="case-lead">
+          A modern geospatial platform for situational awareness, counter-drone
+          monitoring, mission planning, replay, sensor visualization, and
+          spatial decision support.
+        </p>
+      </div>
+    </div>
+  </header>
+
+  <main class="section shell">
+    <div class="case-layout">
+      <article class="case-content">
+
+        <section class="case-section">
+          <h2>Project overview</h2>
+
+          <p>
+            TGBMC is a tactical GIS and battle-management software
+            proof of concept designed around geospatial awareness, planning,
+            replay, analytics, and sensor information.
+          </p>
+
+          <p>
+            The project is positioned as a professional GIS and decision-support
+            platform rather than an autonomous engagement or weapon-control
+            system.
+          </p>
+        </section>
+
+        <section class="case-section">
+          <h2>My contribution</h2>
+
+          <ul>
+            <li>
+              Defined the implementation stack and overall application
+              architecture.
+            </li>
+
+            <li>
+              Designed the PostgreSQL and PostGIS data foundation for
+              geospatial entities and application state.
+            </li>
+
+            <li>
+              Organized Angular modules and navigation around clear operational
+              workflows.
+            </li>
+
+            <li>
+              Planned Luciad RIA integration for professional 2D and 3D GIS
+              visualization.
+            </li>
+
+            <li>
+              Established FastAPI, Redis, WebSocket, and Docker foundations for
+              backend services and live updates.
+            </li>
+
+            <li>
+              Reviewed visible terminology to keep the platform focused on
+              awareness, planning, replay, and geospatial intelligence.
+            </li>
+
+            <li>
+              Developed the platform incrementally, one module and milestone at
+              a time.
+            </li>
+          </ul>
+        </section>
+
+        <section class="case-section">
+          <h2>Platform architecture</h2>
+
+          <div class="architecture-flow">
+            <div class="architecture-node">
+              <strong>Sensors and geospatial inputs</strong>
+              <span>
+                Tracks, detections, zones, sites, plans, replay records, and
+                map layers
+              </span>
+            </div>
+
+            <div class="architecture-arrow">↓ Data processing and APIs</div>
+
+            <div class="architecture-node">
+              <strong>FastAPI application services</strong>
+              <span>
+                Domain APIs, validation, business workflows, analytics, and
+                live-state management
+              </span>
+            </div>
+
+            <div class="architecture-arrow">↓ Persisted and live state</div>
+
+            <div class="architecture-node">
+              <strong>PostgreSQL, PostGIS, and Redis</strong>
+              <span>
+                Geospatial records, application entities, runtime state, and
+                event distribution
+              </span>
+            </div>
+
+            <div class="architecture-arrow">↓ WebSocket and REST delivery</div>
+
+            <div class="architecture-node">
+              <strong>Angular and Luciad RIA frontend</strong>
+              <span>
+                GIS visualization, dashboards, planning, replay, alerts, and
+                decision-support workflows
+              </span>
+            </div>
+          </div>
+        </section>
+
+        <section class="case-section">
+          <h2>Core platform areas</h2>
+
+          <h3>Situational awareness</h3>
+          <p>
+            Present sensor information, geospatial entities, operational zones,
+            sites, tracks, and events through one map-centred interface.
+          </p>
+
+          <h3>Mission planning</h3>
+          <p>
+            Support planning workflows using map geometry, spatial context,
+            stored plans, overlays, and relevant operational information.
+          </p>
+
+          <h3>Replay and analysis</h3>
+          <p>
+            Preserve time-based records so scenarios and events can be reviewed
+            for training, investigation, and system assessment.
+          </p>
+
+          <h3>Geospatial intelligence</h3>
+          <p>
+            Use PostGIS-backed spatial data and professional GIS visualization
+            for querying, filtering, and understanding location-based
+            information.
+          </p>
+
+          <h3>Sensor dashboards</h3>
+          <p>
+            Organize system health, detections, alerts, and sensor state into
+            clear dashboard and map workflows.
+          </p>
+        </section>
+
+        <section class="case-section">
+          <h2>Verified platform foundation</h2>
+
+          <div class="evidence-grid">
+            <div class="evidence-card">
+              <strong>12 core tables</strong>
+              <span>
+                Initial TGBMC application schema covering core platform
+                entities.
+              </span>
+            </div>
+
+            <div class="evidence-card">
+              <strong>PostGIS SRID 4326</strong>
+              <span>
+                Standardized geospatial storage for latitude and longitude data.
+              </span>
+            </div>
+
+            <div class="evidence-card">
+              <strong>Modern service stack</strong>
+              <span>
+                Angular, FastAPI, PostgreSQL, PostGIS, Redis, WebSockets, and
+                Docker.
+              </span>
+            </div>
+
+            <div class="evidence-card">
+              <strong>Incremental milestones</strong>
+              <span>
+                Architecture, navigation, database, terminology, and deployment
+                foundations developed in controlled steps.
+              </span>
+            </div>
+          </div>
+        </section>
+
+        <section class="case-section">
+          <h2>Engineering decisions</h2>
+
+          <h3>GIS-first product design</h3>
+          <p>
+            The map is treated as the primary workspace rather than being added
+            as a secondary visualization.
+          </p>
+
+          <h3>Clear domain boundaries</h3>
+          <p>
+            Backend services, persistent spatial data, live runtime state, and
+            frontend visualization are separated to keep the platform easier to
+            test and extend.
+          </p>
+
+          <h3>Controlled terminology</h3>
+          <p>
+            Public and user-facing language emphasizes monitoring, awareness,
+            planning, replay, and decision support.
+          </p>
+
+          <h3>One-module-at-a-time delivery</h3>
+          <p>
+            The project avoids changing every area simultaneously. Each module
+            is inspected, implemented, validated, and then integrated.
+          </p>
+        </section>
+
+        <section class="case-section">
+          <h2>Outcome</h2>
+
+          <p>
+            TGBMC now has a defined product direction, modern application
+            architecture, clean geospatial database foundation, professional
+            terminology, and a structured path for implementing GIS modules
+            incrementally.
+          </p>
+
+          <div class="case-note">
+            This public case study covers only software architecture,
+            geospatial workflows, platform design, and decision-support
+            concepts. Sensitive operational implementation details are not
+            included.
+          </div>
+
+          <div class="case-footer-actions">
+            <a class="button primary" href="../index.html#projects">
+              Back to projects
+            </a>
+
+            <a class="button secondary" href="../index.html#contact">
+              Contact me
+            </a>
+          </div>
+        </section>
+      </article>
+
+      <aside class="case-sidebar">
+        <div class="case-side-card">
+          <h3>Role</h3>
+
+          <p>
+            Product architecture, GIS workflow design, data modelling,
+            terminology review, deployment foundations, and incremental
+            implementation.
+          </p>
+        </div>
+
+        <div class="case-side-card">
+          <h3>Technology</h3>
+
+          <div class="case-stack">
+            <span>Angular</span>
+            <span>Luciad RIA</span>
+            <span>FastAPI</span>
+            <span>Python</span>
+            <span>PostgreSQL</span>
+            <span>PostGIS</span>
+            <span>Redis</span>
+            <span>WebSockets</span>
+            <span>Docker</span>
+          </div>
+        </div>
+
+        <div class="case-side-card">
+          <h3>Availability</h3>
+
+          <p><strong>Source:</strong> Private</p>
+          <p><strong>Case study:</strong> Public and sanitized</p>
+          <p><strong>Status:</strong> Platform foundation</p>
+        </div>
+      </aside>
+    </div>
+  </main>
+</body>
+</html>

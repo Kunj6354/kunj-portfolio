@@ -92,7 +92,7 @@ const projects = [
     id: "carsetu-ecosystem",
     title: "CarSetu — Marketplace & Android Field Operations",
     category: ["business", "platform", "mobile"],
-    badge: "Founder Product",
+    badge: "Independent Product Project",
     summary:
       "A local used-car marketplace ecosystem combining public inventory, dealer workflows, admin operations, lead generation, photo review, and an Android field-capture application.",
     points: [
@@ -102,7 +102,7 @@ const projects = [
     ],
     tags: ["React", "Node.js", "MongoDB", "Kotlin", "Android", "Vercel"],
     role:
-      "Founder, product manager, system designer, full-stack developer, Android developer, deployment owner, and business-process designer.",
+      "Product design, system architecture, full-stack development, Android development, deployment, and business-workflow implementation.",
     challenge:
       "The ecosystem must support fast dealer operations, trustworthy vehicle presentation, structured field photography, lead generation, and clear public claims without owning inventory.",
     outcome:
@@ -124,7 +124,7 @@ const projects = [
     ],
     tags: ["Vite", "Node.js", "Supabase", "Render", "Inventory", "WhatsApp"],
     role:
-      "Business owner, product designer, full-stack developer, deployment owner, and operations workflow designer.",
+      "Product design, full-stack development, cloud deployment, inventory workflow design, and operational implementation.",
     challenge:
       "The system must remain simple for local customers while accurately representing availability and rental conditions.",
     outcome:
@@ -136,7 +136,7 @@ const projects = [
     id: "stackore",
     title: "StackOre Technologies — Software POC Studio",
     category: ["business", "platform"],
-    badge: "Founder Platform",
+    badge: "Independent Platform Project",
     summary:
       "A software product and proof-of-concept studio focused on websites, MVPs, dashboards, automation, AI/ML, GIS, computer vision, robotics, and edge systems.",
     points: [
@@ -146,7 +146,7 @@ const projects = [
     ],
     tags: ["Next.js", "TypeScript", "Resend", "Vercel", "Product Strategy", "SEO"],
     role:
-      "Founder, product strategist, web developer, deployment owner, and portfolio curator.",
+      "Product strategy, website development, deployment, service presentation, and project portfolio design.",
     challenge:
       "The brand must demonstrate credible engineering capability through real work rather than functioning only as an internship platform.",
     outcome:

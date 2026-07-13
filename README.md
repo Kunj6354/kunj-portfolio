@@ -2,7 +2,7 @@
 
 Portfolio of Kunj Patel, a Software Engineer working across GIS, simulation,
 robotics, legacy system restoration, full-stack platforms, Android applications,
-and founder-led software products.
+and independently developed software products.
 
 ## Professional Experience
 

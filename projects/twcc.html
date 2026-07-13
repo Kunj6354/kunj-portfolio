@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="Public engineering case study of Kunj Patel's work restoring and modernizing a legacy C++ and Qt GIS system."
+  />
+  <title>TWCC Legacy Recovery | Kunj Patel</title>
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@600;700;800&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="../styles.css" />
+  <link rel="stylesheet" href="./project.css" />
+</head>
+<body>
+  <header class="case-header">
+    <div class="shell">
+      <nav class="case-nav">
+        <a class="brand" href="../index.html">
+          <span class="brand-mark">KP</span>
+          <span>Kunj Patel</span>
+        </a>
+        <a class="case-back" href="../index.html#projects">← All projects</a>
+      </nav>
+
+      <div class="case-hero">
+        <div class="case-labels">
+          <span>Flagship professional work</span>
+          <span>Restored and expanding</span>
+          <span>Private source</span>
+        </div>
+
+        <h1>TWCC Legacy Recovery & Modernization</h1>
+
+        <p class="case-lead">
+          Recovery of a production-era, multi-module C++ and Qt GIS system,
+          including desktop displays, planning tools, simulation, replay,
+          database integration, network communication, and a modern web POC.
+        </p>
+      </div>
+    </div>
+  </header>
+
+  <main class="section shell">
+    <div class="case-layout">
+      <article class="case-content">
+        <section class="case-section">
+          <h2>Project context</h2>
+          <p>
+            The system was developed over several years as a collection of
+            connected C++ and Qt applications. Recovering it required more than
+            making the code compile: its original workflows, GIS behaviour,
+            runtime dependencies, database assumptions, and communication
+            between modules also had to be understood and validated.
+          </p>
+          <p>
+            My approach treated the recovered user interfaces, C++ backend,
+            database tables, network behaviour, and historical runtime evidence
+            as the source of truth.
+          </p>
+        </section>
+
+        <section class="case-section">
+          <h2>My contribution</h2>
+          <ul>
+            <li>Inspected and rebuilt unfamiliar legacy C++ and Qt modules.</li>
+            <li>Recovered GIS displays, overlays, track interaction, planning, simulation, and replay workflows.</li>
+            <li>Traced UDP/TCP communication and PostgreSQL-backed runtime behaviour.</li>
+            <li>Corrected geospatial handling while preserving source-backed workflow behaviour.</li>
+            <li>Made machine-sensitive runtime behaviour configurable where practical.</li>
+            <li>Built a modern Angular, Django, and Luciad-based interpretation as a separate POC.</li>
+            <li>Validated changes through focused builds, runtime checks, database checks, and end-to-end workflow testing.</li>
+          </ul>
+        </section>
+
+        <section class="case-section">
+          <h2>Sanitized system architecture</h2>
+
+          <div class="architecture-flow">
+            <div class="architecture-node">
+              <strong>Simulation and planning inputs</strong>
+              <span>Tracks, routes, replay data, geometry, and test scenarios</span>
+            </div>
+
+            <div class="architecture-arrow">↓ Network communication</div>
+
+            <div class="architecture-node">
+              <strong>C++ interface and runtime modules</strong>
+              <span>Message handling, state management, integration, and database interaction</span>
+            </div>
+
+            <div class="architecture-arrow">↓ Runtime state and data</div>
+
+            <div class="architecture-node">
+              <strong>PostgreSQL and persisted records</strong>
+              <span>Tracks, plans, configuration, replay, and operational state</span>
+            </div>
+
+            <div class="architecture-arrow">↓ Visual presentation</div>
+
+            <div class="architecture-node">
+              <strong>Qt GIS displays and web modernization POC</strong>
+              <span>Map visualization, operator workflows, planning, status, and replay</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="case-section">
+          <h2>Primary engineering challenges</h2>
+
+          <h3>Recovering behaviour without inventing it</h3>
+          <p>
+            Missing or incomplete workflows were restored from code, database,
+            interface, and runtime evidence rather than redesigned from assumptions.
+          </p>
+
+          <h3>Distributed assumptions on one development machine</h3>
+          <p>
+            The original system expected multiple connected applications and
+            machines. A reliable development environment required careful port,
+            address, startup, and module coordination.
+          </p>
+
+          <h3>Legacy GIS and coordinate behaviour</h3>
+          <p>
+            Geospatial operations had to preserve expected map behaviour,
+            coordinate conventions, overlays, visibility, and interaction.
+          </p>
+
+          <h3>Controlled modernization</h3>
+          <p>
+            The web POC demonstrates a modern architecture without presenting
+            newly simulated behaviour as original operational truth.
+          </p>
+        </section>
+
+        <section class="case-section">
+          <h2>Validation approach</h2>
+
+          <div class="evidence-grid">
+            <div class="evidence-card">
+              <strong>Build verification</strong>
+              <span>Rebuilt affected C++ and Qt applications after focused changes.</span>
+            </div>
+
+            <div class="evidence-card">
+              <strong>Runtime verification</strong>
+              <span>Checked startup, connectivity, logs, module behaviour, and error conditions.</span>
+            </div>
+
+            <div class="evidence-card">
+              <strong>Data verification</strong>
+              <span>Validated relevant database records and runtime state changes.</span>
+            </div>
+
+            <div class="evidence-card">
+              <strong>Workflow verification</strong>
+              <span>Exercised restored operator actions from input through visible result.</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="case-section">
+          <h2>Outcome</h2>
+          <p>
+            The work established a credible recovery path for the original
+            desktop system and its supporting applications while also showing
+            how selected concepts could be represented through a modern
+            Angular, Django, and GIS architecture.
+          </p>
+
+          <div class="case-note">
+            This public case study describes the engineering process at a high
+            level. Sensitive operational logic, internal protocols, deployment
+            topology, credentials, and restricted implementation details are
+            intentionally excluded.
+          </div>
+
+          <div class="case-footer-actions">
+            <a class="button primary" href="../index.html#projects">Back to projects</a>
+            <a class="button secondary" href="../index.html#contact">Contact me</a>
+          </div>
+        </section>
+      </article>
+
+      <aside class="case-sidebar">
+        <div class="case-side-card">
+          <h3>Role</h3>
+          <p>Legacy recovery, GIS restoration, runtime integration, validation, and modernization design.</p>
+        </div>
+
+        <div class="case-side-card">
+          <h3>Technology</h3>
+          <div class="case-stack">
+            <span>C++</span>
+            <span>Qt</span>
+            <span>QGIS</span>
+            <span>PostgreSQL</span>
+            <span>UDP/TCP</span>
+            <span>Angular</span>
+            <span>Django</span>
+            <span>Luciad</span>
+          </div>
+        </div>
+
+        <div class="case-side-card">
+          <h3>Availability</h3>
+          <p><strong>Source:</strong> Private</p>
+          <p><strong>Case study:</strong> Public and sanitized</p>
+          <p><strong>Status:</strong> Restored and expanding</p>
+        </div>
+      </aside>
+    </div>
+  </main>
+</body>
+</html>

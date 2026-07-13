@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="Public engineering case study of a radar-data processing and terrain-aware radar simulation platform."
+  />
+  <title>Radar Detection & Simulation | Kunj Patel</title>
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@600;700;800&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="../styles.css" />
+  <link rel="stylesheet" href="./project.css" />
+</head>
+<body>
+  <header class="case-header">
+    <div class="shell">
+      <nav class="case-nav">
+        <a class="brand" href="../index.html">
+          <span class="brand-mark">KP</span>
+          <span>Kunj Patel</span>
+        </a>
+        <a class="case-back" href="../index.html#projects">← All projects</a>
+      </nav>
+
+      <div class="case-hero">
+        <div class="case-labels">
+          <span>Active development</span>
+          <span>Radar data and simulation</span>
+          <span>Private source</span>
+        </div>
+
+        <h1>Radar Detection & Terrain-Aware Simulation</h1>
+
+        <p class="case-lead">
+          A Python and Angular platform for CAT048 and CAT062 radar-data
+          visualization, replay, live UDP processing, diagnostics, and
+          physics-based terrain-aware radar performance simulation.
+        </p>
+      </div>
+    </div>
+  </header>
+
+  <main class="section shell">
+    <div class="case-layout">
+      <article class="case-content">
+        <section class="case-section">
+          <h2>Project overview</h2>
+          <p>
+            This project combines two related engineering areas: processing and
+            visualizing radar-data files, and independently implementing a radar
+            performance simulator in Python.
+          </p>
+          <p>
+            The simulator is designed around geometry, Earth curvature,
+            propagation horizon, terrain masking, target characteristics,
+            signal-to-noise behaviour, probability of detection, and
+            deterministic validation—not fixed-radius circles.
+          </p>
+        </section>
+
+        <section class="case-section">
+          <h2>My contribution</h2>
+          <ul>
+            <li>Organized the backend as independently testable Python modules.</li>
+            <li>Built FastAPI endpoints for configuration, runtime state, replay, and simulation.</li>
+            <li>Integrated CAT048 and CAT062 workflows for replay and visualization.</li>
+            <li>Added live UDP ingestion and end-to-end runtime validation.</li>
+            <li>Implemented documented radar equations and physics concepts without requiring MATLAB at runtime.</li>
+            <li>Connected the backend to an Angular radar console and 3D geospatial interface.</li>
+            <li>Created deterministic automated tests for physics, configuration, detection, measurements, and runtime behaviour.</li>
+          </ul>
+        </section>
+
+        <section class="case-section">
+          <h2>Sanitized system flow</h2>
+
+          <div class="architecture-flow">
+            <div class="architecture-node">
+              <strong>Radar data and scenarios</strong>
+              <span>CAT048, CAT062, live UDP packets, radar sites, targets, and terrain inputs</span>
+            </div>
+
+            <div class="architecture-arrow">↓ Parse and validate</div>
+
+            <div class="architecture-node">
+              <strong>Python and FastAPI backend</strong>
+              <span>Data processing, physics, detection, measurement generation, replay, and runtime APIs</span>
+            </div>
+
+            <div class="architecture-arrow">↓ Structured application state</div>
+
+            <div class="architecture-node">
+              <strong>Angular frontend</strong>
+              <span>Radar picture, tracks, detections, replay, diagnostics, configuration, and simulation controls</span>
+            </div>
+
+            <div class="architecture-arrow">↓ Geospatial presentation</div>
+
+            <div class="architecture-node">
+              <strong>2D and 3D visualization</strong>
+              <span>Terrain-aware coverage, masked regions, targets, sites, tracks, and performance indicators</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="case-section">
+          <h2>Engineering principles</h2>
+
+          <h3>Terrain-aware coverage</h3>
+          <p>
+            Detection coverage is derived from geometry and environmental
+            constraints so elevated and masked terrain can produce irregular
+            visible regions.
+          </p>
+
+          <h3>Deterministic testing</h3>
+          <p>
+            Stochastic behaviour uses controlled seeds so expected detection
+            and measurement behaviour can be tested repeatedly.
+          </p>
+
+          <h3>Independent implementation</h3>
+          <p>
+            MATLAB and radar-toolbox documentation may be used as conceptual
+            reference material, but the project does not depend on MATLAB
+            runtime or proprietary source code.
+          </p>
+
+          <h3>Incremental validation</h3>
+          <p>
+            New physics and runtime features are added in small phases and
+            validated before expanding the model.
+          </p>
+        </section>
+
+        <section class="case-section">
+          <h2>Verified evidence</h2>
+
+          <div class="evidence-grid">
+            <div class="evidence-card">
+              <strong>45 tests</strong>
+              <span>Latest verified backend milestone covering the implemented physics and runtime layers.</span>
+            </div>
+
+            <div class="evidence-card">
+              <strong>CAT048 + CAT062</strong>
+              <span>Replay and visualization workflows represented in the application.</span>
+            </div>
+
+            <div class="evidence-card">
+              <strong>Live UDP</strong>
+              <span>End-to-end ingestion and runtime routing validated through focused tests.</span>
+            </div>
+
+            <div class="evidence-card">
+              <strong>Connected UI</strong>
+              <span>Angular frontend communicates with the FastAPI backend and exposes radar simulation workflows.</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="case-section">
+          <h2>Outcome</h2>
+          <p>
+            The project now provides a structured foundation for radar-data
+            processing and progressively higher-fidelity simulation. Its
+            architecture keeps physics, runtime, APIs, testing, and visualization
+            separate enough to evolve safely.
+          </p>
+
+          <div class="case-note">
+            This case study presents general software, physics, testing, and
+            visualization concepts. It does not expose protected operational
+            parameters or implement autonomous engagement logic.
+          </div>
+
+          <div class="case-footer-actions">
+            <a class="button primary" href="../index.html#projects">Back to projects</a>
+            <a class="button secondary" href="../index.html#contact">Contact me</a>
+          </div>
+        </section>
+      </article>
+
+      <aside class="case-sidebar">
+        <div class="case-side-card">
+          <h3>Role</h3>
+          <p>Architecture, backend APIs, radar physics, automated testing, Angular integration, and runtime validation.</p>
+        </div>
+
+        <div class="case-side-card">
+          <h3>Technology</h3>
+          <div class="case-stack">
+            <span>Python</span>
+            <span>FastAPI</span>
+            <span>Angular</span>
+            <span>Pytest</span>
+            <span>UDP</span>
+            <span>3D GIS</span>
+            <span>CAT048</span>
+            <span>CAT062</span>
+          </div>
+        </div>
+
+        <div class="case-side-card">
+          <h3>Availability</h3>
+          <p><strong>Source:</strong> Private</p>
+          <p><strong>Case study:</strong> Public and sanitized</p>
+          <p><strong>Status:</strong> Active development</p>
+        </div>
+      </aside>
+    </div>
+  </main>
+</body>
+</html>

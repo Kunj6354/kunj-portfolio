@@ -2,6 +2,7 @@
 const projects = [
   {
     id: "twcc-recovery-modernization",
+    caseStudyUrl: "./projects/twcc.html",
     title: "TWCC — Legacy Recovery & Modernization Program",
     category: ["gis", "platform"],
     badge: "Flagship Professional Work",
@@ -28,6 +29,7 @@ const projects = [
   },
   {
     id: "radar-detection",
+    caseStudyUrl: "./projects/radar.html",
     title: "Radar Detection & Terrain-Aware Radar Simulation",
     category: ["gis", "platform"],
     badge: "Active Development",
@@ -216,7 +218,11 @@ function projectCard(project, index) {
       <ul class="project-points">${points}</ul>
       <div class="project-tags">${tags}</div>
       <div class="project-actions">
-        <button class="project-action" data-project="${project.id}">View case study →</button>
+        ${
+          project.caseStudyUrl
+            ? `<a class="project-action" href="${project.caseStudyUrl}">Read full case study →</a>`
+            : `<button class="project-action" data-project="${project.id}">View project summary →</button>`
+        }
       </div>
     </article>
   `;

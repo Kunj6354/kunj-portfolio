@@ -1,0 +1,258 @@
+.case-header {
+  padding: 80px 0 46px;
+}
+
+.case-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.case-back {
+  color: var(--accent-strong);
+  font-weight: 700;
+}
+
+.case-back:hover {
+  text-decoration: underline;
+}
+
+.case-hero {
+  max-width: 940px;
+  margin-top: 78px;
+}
+
+.case-labels {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin-bottom: 24px;
+}
+
+.case-labels span {
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 8px 12px;
+  color: var(--accent-secondary);
+  background: rgba(255, 255, 255, 0.04);
+  font-size: 0.76rem;
+  font-weight: 700;
+}
+
+.case-hero h1 {
+  margin: 0;
+  font-family: "Manrope", sans-serif;
+  font-size: clamp(2.8rem, 7vw, 5.6rem);
+  line-height: 1.02;
+  letter-spacing: -0.05em;
+}
+
+.case-lead {
+  max-width: 820px;
+  margin: 28px 0 0;
+  color: var(--muted);
+  font-size: clamp(1.06rem, 2vw, 1.28rem);
+}
+
+.case-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 270px;
+  gap: 70px;
+  align-items: start;
+}
+
+.case-content {
+  min-width: 0;
+}
+
+.case-section {
+  padding: 38px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.case-section:first-child {
+  padding-top: 0;
+}
+
+.case-section h2 {
+  margin: 0 0 18px;
+  font-family: "Manrope", sans-serif;
+  font-size: clamp(1.65rem, 3vw, 2.35rem);
+  letter-spacing: -0.035em;
+}
+
+.case-section h3 {
+  margin: 26px 0 10px;
+  font-family: "Manrope", sans-serif;
+}
+
+.case-section p,
+.case-section li {
+  color: var(--muted);
+}
+
+.case-section ul {
+  padding-left: 21px;
+}
+
+.case-section li + li {
+  margin-top: 9px;
+}
+
+.case-sidebar {
+  position: sticky;
+  top: 110px;
+  display: grid;
+  gap: 16px;
+}
+
+.case-side-card {
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.035);
+}
+
+.case-side-card h3 {
+  margin: 0 0 14px;
+  font-family: "Manrope", sans-serif;
+  font-size: 1rem;
+}
+
+.case-side-card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.86rem;
+}
+
+.case-side-card p + p {
+  margin-top: 11px;
+}
+
+.case-side-card strong {
+  color: var(--text);
+}
+
+.case-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.case-stack span {
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 6px 9px;
+  color: #d9e5f2;
+  background: rgba(255, 255, 255, 0.04);
+  font-size: 0.72rem;
+}
+
+.architecture-flow {
+  display: grid;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.architecture-node {
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 18px;
+  background: linear-gradient(
+    145deg,
+    rgba(18, 37, 61, 0.82),
+    rgba(10, 24, 41, 0.75)
+  );
+}
+
+.architecture-node strong {
+  display: block;
+  color: var(--text);
+}
+
+.architecture-node span {
+  display: block;
+  margin-top: 4px;
+  color: var(--muted);
+  font-size: 0.86rem;
+}
+
+.architecture-arrow {
+  color: var(--accent-strong);
+  text-align: center;
+  font-weight: 800;
+}
+
+.evidence-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 22px;
+}
+
+.evidence-card {
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 18px;
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.evidence-card strong {
+  display: block;
+  color: var(--accent-secondary);
+  font-family: "Manrope", sans-serif;
+  font-size: 1.1rem;
+}
+
+.evidence-card span {
+  display: block;
+  margin-top: 6px;
+  color: var(--muted);
+  font-size: 0.83rem;
+}
+
+.case-note {
+  border-left: 3px solid var(--accent-strong);
+  margin-top: 24px;
+  padding: 16px 18px;
+  color: var(--muted);
+  background: rgba(89, 210, 255, 0.05);
+}
+
+.case-footer-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding-top: 34px;
+}
+
+@media (max-width: 900px) {
+  .case-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .case-sidebar {
+    position: static;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 620px) {
+  .case-header {
+    padding-top: 50px;
+  }
+
+  .case-hero {
+    margin-top: 58px;
+  }
+
+  .case-sidebar,
+  .evidence-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .case-nav .brand > span:last-child {
+    display: none;
+  }
+}

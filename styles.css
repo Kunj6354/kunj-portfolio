@@ -1255,11 +1255,60 @@ button {
 }
 
 
-/* Desktop density
-   Makes browser zoom 100% visually match the previous 80% layout. */
+/* Native compact desktop layout
+   Keeps browser zoom at 100% while using more horizontal space. */
 @media (min-width: 1100px) {
+  html {
+    font-size: 13px;
+  }
+
   body {
-    width: 125%;
-    zoom: 0.8;
+    width: auto;
+    zoom: 1;
+  }
+
+  :root {
+    --shell: min(1440px, calc(100% - 64px));
+  }
+
+  .nav {
+    height: 68px;
+  }
+
+  .section {
+    padding: 88px 0;
+  }
+
+  .hero {
+    min-height: calc(100vh - 68px);
+    grid-template-columns: minmax(0, 1.02fr) minmax(340px, 0.78fr);
+    gap: 64px;
+    padding-top: 64px;
+  }
+
+  .hero-visual {
+    min-height: 560px;
+  }
+
+  .case-header {
+    padding: 56px 0 34px;
+  }
+
+  .case-hero {
+    max-width: 1080px;
+    margin-top: 56px;
+  }
+
+  .case-layout {
+    grid-template-columns: minmax(0, 1fr) 300px;
+    gap: 48px;
+  }
+
+  .case-sidebar {
+    top: 88px;
+  }
+
+  .case-section {
+    padding: 32px 0;
   }
 }
